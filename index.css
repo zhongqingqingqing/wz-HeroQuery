@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ecedf2;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1140px;
+  margin: 1em auto;
+}
+
+.search {
+  display: flex;
+  /* 主轴布局方式，两侧靠边 */
+  justify-content: space-between;
+  height: 100px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
+.title {
+  width: 80px;
+  background: #5488d5;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px 0 0 10px;
+}
+
+/* 搜索框的中间类型部分 */
+.types {
+  /* 可拉伸，不可压缩 */
+  flex: 1 0 auto;
+  color: #666;
+  font-size: 14px;
+}
+
+.type-list {
+  display: flex;
+  margin-left: 30px;
+}
+
+.radio {
+  margin-right: 30px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.radio::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.radio::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #5488d5;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  /* 一开始缩小到0（看不见），点击后在缩放到1 */
+  transform: translateY(-50%) scale(0);
+  transition: all 0.25s;
+}
+
+.radio.checked::after {
+  transform: translateY(-50%) scale(1);
+}
+
+.keyword {
+  margin-top: 50px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.input input {
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.input::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: url(./search_icon.png) no-repeat center center;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 1px solid #ccc;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  text-align: center;
+  justify-items: center;
+  font-size: 14px;
+  color: #666;
+  row-gap: 20px;
+}
+
+.list img {
+  width: 77px;
+  height: 77px;
+  display: block;
+  margin-bottom: 5px;
+  border: 2px solid #5488d5;
+  border-radius: 10px 0;
+}

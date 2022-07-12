@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>王者荣耀官网英雄查询</title>
+    <link rel="stylesheet" href="./index.css" / >
+  </head>
+  <body>
+    <div class="container">
+      <!-- 上部搜索区 -->
+      <div class="search">
+        <!-- 定位、综合 -->
+        <div class="title">
+          <p>综合</p>
+          <p>定位</p>
+        </div>
+
+        <!-- 类型选择 -->
+        <div class="types">
+          <!-- 类型选择-上部分 -->
+          <div class="type-list">
+            <div class="radio" data-type="pay_type" data-value="10">
+              本周免费
+            </div>
+            <div class="radio" data-type="pay_type" data-value="11">
+              新手推荐
+            </div>
+          </div>
+          <!-- 类型选择下部分 -->
+          <div class="type-list">
+            <div class="radio checked" data-type="all">全部</div>
+            <div class="radio" data-type="hero_type" data-value="3">坦克</div>
+            <div class="radio" data-type="hero_type" data-value="1">战士</div>
+            <div class="radio" data-type="hero_type" data-value="4">刺客</div>
+            <div class="radio" data-type="hero_type" data-value="2">法师</div>
+            <div class="radio" data-type="hero_type" data-value="5">射手</div>
+            <div class="radio" data-type="hero_type" data-value="6">辅助</div>
+          </div>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="keyword">
+          <div class="input">
+            <input type="text" placeholder="请输入你想要的英雄名" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 英雄列表展示区 -->
+      <ul class="list">
+        <!-- <li class="list-item">
+          <a href="https://pvp.qq.com/web201605/herodetail/155.shtml">
+            <img
+              src="https://game.gtimg.cn/images/yxzj/img201606/heroimg/155/155.jpg"
+              alt=""
+            />
+            <span>艾琳</span>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
